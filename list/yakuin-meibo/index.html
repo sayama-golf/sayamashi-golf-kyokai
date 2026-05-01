@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -7,15 +6,22 @@
 <title>2026年 役員名簿</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ★ここが重要（余白原因を除去） */
 body{
     font-family: Arial, sans-serif;
     background:#f5f7f5;
-    margin:0;
-    padding:20px;
+    color:#333;
+    line-height:1.6;
 }
 
 /* ======================
-   ヘッダー
+   ヘッダー（完全統一）
 ====================== */
 header{
     position:relative;
@@ -46,7 +52,7 @@ header span{
 }
 
 /* ======================
-   ナビタブ
+   ナビタブ（完全統一）
 ====================== */
 .nav-tabs{
     display:flex;
@@ -73,7 +79,16 @@ header span{
 .nav-tabs a:hover{
     background:#e8f5e9;
 }
-    
+
+/* ======================
+   メインエリア（余白はここで管理）
+====================== */
+main{
+    max-width:900px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
 /* ======================
    タイトル
 ====================== */
@@ -89,7 +104,6 @@ header span{
     margin-bottom:20px;
 }
 
-/* 左右の装飾 */
 .title-box::before,
 .title-box::after{
     content:"";
@@ -106,13 +120,8 @@ header span{
     background-repeat:no-repeat;
 }
 
-.title-box::before{
-    left:15px;
-}
-
-.title-box::after{
-    right:15px;
-}
+.title-box::before{ left:15px; }
+.title-box::after{ right:15px; }
 
 /* ======================
    テーブル
@@ -145,7 +154,6 @@ td{
     background:#f9f9f9;
 }
 
-/* 交互色 */
 tr:nth-child(even) td{
     background:#f1f8e9;
 }
@@ -155,9 +163,23 @@ tr:nth-child(even) td{
 ====================== */
 @media (max-width:768px){
 
+header{
+    min-height:200px;
+    font-size:2rem;
+}
+
+.nav-tabs a{
+    padding:16px 3px;
+    font-size:0.9rem;
+}
+
+main{
+    margin:25px auto;
+    padding:0 14px;
+}
+
 .title-box{
     font-size:1.3rem;
-    padding:12px;
 }
 
 th, td{
@@ -179,17 +201,17 @@ th, td{
 <!-- ナビ -->
 <div class="nav-tabs">
     <a href="/sayamashi-golf-kyokai/">ホーム</a>
-    <a href="#">大会案内</a>
-    <a href="/sayamashi-golf-kyokai/list/yakuin-meibo/index.html">役員名簿</a>
+    <a href="/sayamashi-golf-kyokai/events-home/index.html">大会案内</a>
+    <a href="#">役員名簿</a>
     <a href="/sayamashi-golf-kyokai/list/toiawase/index.html">問合せ</a>
 </div>
 
-<!-- タイトル -->
+<main>
+
 <div class="title-box">
     2026年　役員名簿
 </div>
 
-<!-- テーブル -->
 <div class="table-wrap">
 <table>
 
@@ -218,6 +240,8 @@ th, td{
 
 </table>
 </div>
+
+</main>
 
 </body>
 </html>
