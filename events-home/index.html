@@ -22,23 +22,19 @@ body{
 }
 
 /* ======================
-   ヘッダー（統一仕様）
+   ヘッダー
 ====================== */
 header{
     position:relative;
     width:100%;
     min-height:320px;
-
-    /* ★ 完全統一ポイント */
     background:url("header.jpg") center 35% / cover no-repeat;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     color:#fff;
     text-align:center;
-    font-size:4rem; /* ←統一 */
+    font-size:4rem;
     font-weight:bold;
     overflow:hidden;
 }
@@ -57,7 +53,7 @@ header span{
 }
 
 /* ======================
-   ナビタブ（完全一致）
+   ナビタブ
 ====================== */
 .nav-tabs{
     display:flex;
@@ -93,7 +89,6 @@ header span{
     padding:12px 20px;
     display:flex;
     justify-content:flex-end;
-    align-items:center;
 }
 
 .counter-box{
@@ -159,7 +154,8 @@ main{
     box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
-.archive-card{
+/* ★ archive → event に変更 */
+.event-card{
     background:#f9fff9;
     border:1px solid #d9eadb;
     border-left:6px solid #2e7d32;
@@ -168,14 +164,14 @@ main{
     margin-bottom:15px;
 }
 
-.archive-date{
+.event-date{
     font-size:1.1rem;
     font-weight:bold;
     color:#1b5e20;
     margin-bottom:8px;
 }
 
-.archive-text{
+.event-text{
     font-size:0.96rem;
     color:#444;
     margin-bottom:4px;
@@ -236,7 +232,7 @@ main{
     <span>狭山市ゴルフ協会</span>
 </header>
 
-<!-- ナビタブ（追加） -->
+<!-- ナビ -->
 <div class="nav-tabs">
     <a href="https://sayama-golf.github.io/sayamashi-golf-kyokai/">ホーム</a>
     <a href="events-home/events/index.html">大会案内</a>
@@ -267,17 +263,42 @@ main{
 
 <div class="scroll-box">
 
-    <div class="archive-card">
-        <div class="archive-date">
-            <i class="fa-solid fa-calendar-days"></i>2026.09.28
+    <!-- 2026.09.28 -->
+    <div class="event-card">
+        <div class="event-date">
+            <i class="fa-solid fa-calendar-days"></i> 第91回狭山市ゴルフ大会
         </div>
-        <div class="archive-text">
-            <a href="archives/2026.09.28/" class="detail-link">詳細はこちら</a>
+        <div class="event-text">
+            <a href="events-home/events/2026.09.28/" class="detail-link">詳細はこちら</a>
         </div>
-        <div class="archive-text">開催場所：狭山ゴルフ・クラブ</div>
-        <div class="archive-text">開催予定日：2026年9月28日(月)</div>
+        <div class="event-text">開催場所：狭山ゴルフ・クラブ</div>
+        <div class="event-text">開催予定日：2026年9月28日(月)</div>
     </div>
 
+    <!-- 2026.11.30 -->
+    <div class="event-card">
+        <div class="event-date">
+            <i class="fa-solid fa-calendar-days"></i> 第92回狭山市ゴルフ大会
+        </div>
+        <div class="event-text">
+            <a href="events-home/events/2026.11.30/" class="detail-link">詳細はこちら</a>
+        </div>
+        <div class="event-text">開催場所：日高カントリークラブ</div>
+        <div class="event-text">開催予定日：2026年11月30日(月)</div>
+    </div>
+
+    <!-- 2027.03.10 -->
+    <div class="event-card">
+        <div class="event-date">
+            <i class="fa-solid fa-calendar-days"></i> 第93回狭山市ゴルフ大会
+        </div>
+        <div class="event-text">
+            <a href="events-home/events/2027.03.10/" class="detail-link">詳細はこちら</a>
+        </div>
+        <div class="event-text">開催場所：武蔵カントリークラブ笹井コース</div>
+        <div class="event-text">開催予定日：2027年3月10日(水)</div>
+    </div>
+    
 </div>
 
 </main>
