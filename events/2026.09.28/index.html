@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>狭山市民ゴルフ大会 2026年9月28日(月)開催</title>
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    color:#333;
+    background:#ffffff;
+    line-height:1.7;
+}
+
+/* ======================
+   HERO
+====================== */
+.hero{
+    position:relative;
+    height:40vh;
+    min-height:380px;
+    overflow:hidden;
+
+    /* header.jpg を背景表示 */
+    background-image:url("header.jpg");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+/* オーバーレイ */
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.58);
+    z-index:1;
+}
+
+/* タイトル */
+.hero-title{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+    color:#fff;
+    text-align:center;
+    width:90%;
+    font-weight:bold;
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.9),
+        0 4px 12px rgba(0,0,0,0.8);
+}
+
+.hero-title .main{
+    display:block;
+    font-size:3rem;
+    margin-bottom:12px;
+}
+
+.hero-title .sub{
+    display:block;
+    font-size:2rem;
+    white-space:nowrap; /* 改行防止 */
+}
+
+/* ======================
+   共通
+====================== */
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+h2{
+    font-size:1.7rem;
+    border-bottom:2px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom:20px;
+}
+
+p{
+    margin-bottom:12px;
+}
+
+.icon{
+    color:#2e7d32;
+    margin-right:8px;
+    width:22px;
+}
+
+/* ======================
+   ボタン
+====================== */
+.button{
+    display:block;
+    width:100%;
+    max-width:320px;
+    padding:13px;
+    margin-top:15px;
+    background:#0066cc;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    text-align:center;
+}
+
+.button:hover{
+    background:#004999;
+}
+
+/* ======================
+   マップ
+====================== */
+.map-container{
+    width:50%;
+    margin-top:15px;
+}
+
+.map-container iframe{
+    width:100%;
+    height:300px;
+    border:0;
+}
+
+/* ======================
+   スマホ
+====================== */
+@media (max-width:768px){
+
+.hero{
+    height:38vh;
+    min-height:260px;
+}
+
+.hero-title .main{
+    font-size:1.6rem;
+    margin-bottom:8px;
+}
+
+.hero-title .sub{
+    font-size:1.15rem;
+    white-space:nowrap; /* スマホでも改行防止 */
+}
+
+.map-container{
+    width:100%;
+}
+
+h2{
+    font-size:1.35rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-title">
+        <span class="main">狭山市民ゴルフ大会</span>
+        <span class="sub">2026年9月28日(月)開催</span>
+    </div>
+</div>
+
+<!-- 開催概要 -->
+<section>
+    <h2><i class="fa-solid fa-calendar icon"></i>開催概要</h2>
+
+    <p><i class="fa-regular fa-clock icon"></i>開催日：2026年9月28日(月)</p>
+    <p><i class="fa-solid fa-location-dot icon"></i>場所：狭山ゴルフ・クラブ</p>
+    <p><i class="fa-solid fa-user-group icon"></i>定員：140名</p>
+    <p><i class="fa-solid fa-yen-sign icon"></i>参加費：4000円（パーティ代込み）　抽選会にて申し込み時にお支払いください。</p>
+    <p>※別途、当日プレー費19,500円をお支払いください。</p>
+    <p>※非協会員の方は、年間の初回参加時に年会費1,000円を頂戴しております。</p>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=狭山ゴルフクラブ&output=embed"></iframe>
+    </div>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=狭山ゴルフクラブ"
+       target="_blank"
+       class="button">
+       Googleマップで開く
+    </a>
+</section>
+
+<!-- 申し込み方法 -->
+<section>
+    <h2><i class="fa-solid fa-clipboard-list icon"></i>申し込み方法</h2>
+
+    <p>抽選会での参加申し込みをもって正式申込となります。</p>
+
+    <p><i class="fa-regular fa-clock icon"></i>抽選日時：調整中</p>
+    <p><i class="fa-solid fa-location-dot icon"></i>抽選会開催場所：調整中</p>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=狭山市役所&output=embed"></iframe>
+    </div>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=狭山市役所"
+       target="_blank"
+       class="button">
+       Googleマップで開く
+    </a>
+</section>
+
+<!-- 問合せ -->
+<section>
+    <h2><i class="fa-solid fa-circle-info icon"></i>問合せ先</h2>
+
+    <p><i class="fa-solid fa-phone icon"></i>電話番号：00-0000-0000</p>
+    <p><i class="fa-solid fa-envelope icon"></i>メール：example@example.com</p>
+</section>
+
+</body>
+</html>
