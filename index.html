@@ -26,26 +26,31 @@ body{
 ====================== */
 header{
     position:relative;
-    min-height:260px;
-    background:url("header.jpg") center/cover no-repeat;
+    min-height:320px;
+
+    background:url("header.jpg") center 35% / cover no-repeat;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     color:#fff;
-    font-size:2.5rem;
+    font-size:5rem; 
     font-weight:bold;
+    text-align:center;
 }
 
 header::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.4);
+    background:rgba(0,0,0,0.45);
 }
 
 header span{
     position:relative;
     z-index:2;
+    text-shadow:0 4px 12px rgba(0,0,0,0.9);
 }
 
 /* ======================
@@ -61,10 +66,14 @@ header span{
 .nav-tabs a{
     flex:1;
     text-align:center;
-    padding:14px 5px;
+
+    padding:28px 5px;
+
     text-decoration:none;
     color:#2e7d32;
     font-weight:bold;
+    font-size:1.2rem;
+
     border-right:1px solid #e0e0e0;
     transition:0.2s;
 }
@@ -105,7 +114,6 @@ main{
     margin-bottom:10px;
 }
 
-/* 各行 */
 .news-item{
     padding:10px 0;
     border-bottom:1px dashed #ccc;
@@ -116,25 +124,27 @@ main{
     border-bottom:none;
 }
 
-/* 日付 */
 .news-date{
     font-weight:bold;
     margin-right:10px;
 }
 
 /* ======================
-   スマホ
+   スマホ対応
 ====================== */
 @media (max-width:768px){
 
 header{
-    min-height:180px;
-    font-size:1.6rem;
+    min-height:200px;
+
+    background-position:center center;
+
+    font-size:2rem;
 }
 
 .nav-tabs a{
-    font-size:0.85rem;
-    padding:12px 3px;
+    padding:16px 3px;
+    font-size:0.9rem;
 }
 
 .news-box{
@@ -155,7 +165,7 @@ header{
 <!-- ナビタブ -->
 <div class="nav-tabs">
     <a href="https://sayama-golf.github.io/sayamashi-golf-kyokai/">ホーム</a>
-    <a href="events-home/index.html">大会案内</a>
+    <a href="events-home/events/index.html">大会案内</a>
     <a href="list/yakuin-meibo/index.html">役員名簿</a>
     <a href="list/toiawase/index.html">問合せ</a>
 </div>
