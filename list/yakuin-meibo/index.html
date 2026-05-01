@@ -1,1 +1,149 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年 役員名簿</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f7f5;
+    margin:0;
+    padding:20px;
+}
+
+/* ======================
+   タイトル
+====================== */
+.title-box{
+    background:#c5e1a5;
+    border:3px solid #7cb342;
+    padding:15px;
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:bold;
+    color:#33691e;
+    position:relative;
+    margin-bottom:20px;
+}
+
+/* 左右の装飾 */
+.title-box::before,
+.title-box::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:28px;
+    height:28px;
+    background:
+        linear-gradient(#558b2f,#558b2f) 0 0/12px 12px,
+        linear-gradient(#558b2f,#558b2f) 16px 0/12px 12px,
+        linear-gradient(#558b2f,#558b2f) 0 16px/12px 12px,
+        linear-gradient(#558b2f,#558b2f) 16px 16px/12px 12px;
+    background-repeat:no-repeat;
+}
+
+.title-box::before{
+    left:15px;
+}
+
+.title-box::after{
+    right:15px;
+}
+
+/* ======================
+   テーブル
+====================== */
+.table-wrap{
+    max-width:600px;
+    margin:0 auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#ffffff;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+th, td{
+    border:1px solid #999;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#aed581;
+    color:#1b5e20;
+    font-weight:bold;
+}
+
+td{
+    background:#f9f9f9;
+}
+
+/* 交互色 */
+tr:nth-child(even) td{
+    background:#f1f8e9;
+}
+
+/* ======================
+   スマホ対応
+====================== */
+@media (max-width:768px){
+
+.title-box{
+    font-size:1.3rem;
+    padding:12px;
+}
+
+th, td{
+    font-size:0.9rem;
+    padding:8px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- タイトル -->
+<div class="title-box">
+    2026年　役員名簿
+</div>
+
+<!-- テーブル -->
+<div class="table-wrap">
+<table>
+
+<tr>
+    <th>役職</th>
+    <th>氏名</th>
+</tr>
+
+<tr><td>会長</td><td>尾池 重孝</td></tr>
+<tr><td>副会長</td><td>落合 秀行</td></tr>
+<tr><td>副会長</td><td>吽野 良昭</td></tr>
+
+<tr><td>理事長</td><td>田口 伸一</td></tr>
+<tr><td>副理事長</td><td>岸 武夫</td></tr>
+<tr><td>副理事長</td><td>奥平 賢治</td></tr>
+<tr><td>理事</td><td>江原 治彦</td></tr>
+<tr><td>理事</td><td>栗原 浩</td></tr>
+<tr><td>理事</td><td>野口 純子</td></tr>
+<tr><td>理事</td><td>吉田 達雄</td></tr>
+<tr><td>理事</td><td>山田 豊</td></tr>
+<tr><td>理事</td><td>清水 武信</td></tr>
+<tr><td>理事</td><td>市川 裕一</td></tr>
+<tr><td>会計</td><td>岸 和則</td></tr>
+<tr><td>会計</td><td>田中 則夫</td></tr>
+
+</table>
+</div>
+
+</body>
+</html>
