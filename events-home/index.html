@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>狭山市民ゴルフ大会 2027年03月10日(水)開催</title>
+<title>狭山市ゴルフ大会 2027年03月10日(水)開催</title>
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -18,71 +16,100 @@
 
 body{
     font-family: Arial, sans-serif;
+    background:#f5f7f5;
     color:#333;
-    background:#ffffff;
     line-height:1.7;
 }
 
 /* ======================
-   HERO
+   ヘッダー
 ====================== */
-.hero{
+header{
     position:relative;
-    height:40vh;
-    min-height:380px;
+    width:100%;
+    min-height:320px;
+    background:url("header.jpg") center 35% / cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-align:center;
+    font-size:4rem;
+    font-weight:bold;
     overflow:hidden;
-
-    /* header.jpg を背景表示 */
-    background-image:url("header.jpg");
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
 }
 
-/* オーバーレイ */
-.hero::after{
+header::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.58);
-    z-index:1;
+    background:rgba(0,0,0,0.45);
 }
 
-/* タイトル */
-.hero-title{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+header span{
+    position:relative;
     z-index:2;
-    color:#fff;
-    text-align:center;
-    width:90%;
-    font-weight:bold;
-    text-shadow:
-        0 2px 6px rgba(0,0,0,0.9),
-        0 4px 12px rgba(0,0,0,0.8);
-}
-
-.hero-title .main{
-    display:block;
-    font-size:3rem;
-    margin-bottom:12px;
-}
-
-.hero-title .sub{
-    display:block;
-    font-size:2rem;
-    white-space:nowrap; /* 改行防止 */
+    text-shadow:0 4px 12px rgba(0,0,0,0.9);
 }
 
 /* ======================
-   共通
+   ナビタブ
+====================== */
+.nav-tabs{
+    display:flex;
+    justify-content:center;
+    background:#ffffff;
+    border-bottom:2px solid #c8e6c9;
+}
+
+.nav-tabs a{
+    flex:1;
+    text-align:center;
+    padding:28px 5px;
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:bold;
+    font-size:1.2rem;
+    border-right:1px solid #e0e0e0;
+}
+
+.nav-tabs a:last-child{
+    border-right:none;
+}
+
+.nav-tabs a:hover{
+    background:#e8f5e9;
+}
+
+/* ======================
+   ページタイトル（修正）
+====================== */
+.page-title{
+    text-align:center;
+    padding:40px 20px 20px;
+}
+
+.page-title h1{
+    font-size:2rem;
+    color:#2e7d32;
+    margin-bottom:8px;
+}
+
+.page-title p{
+    font-size:1.2rem;
+    color:#555;
+}
+
+/* ======================
+   セクション
 ====================== */
 section{
     max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+    margin:30px auto;
+    padding:30px 20px;
+    background:#ffffff;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 h2{
@@ -141,19 +168,22 @@ p{
 ====================== */
 @media (max-width:768px){
 
-.hero{
-    height:38vh;
-    min-height:260px;
+header{
+    min-height:200px;
+    font-size:2rem;
 }
 
-.hero-title .main{
-    font-size:1.6rem;
-    margin-bottom:8px;
+.nav-tabs a{
+    padding:16px 3px;
+    font-size:0.9rem;
 }
 
-.hero-title .sub{
-    font-size:1.15rem;
-    white-space:nowrap; /* スマホでも改行防止 */
+.page-title h1{
+    font-size:1.4rem;
+}
+
+.page-title p{
+    font-size:1rem;
 }
 
 .map-container{
@@ -170,24 +200,35 @@ h2{
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-title">
-        <span class="main">狭山市民ゴルフ大会</span>
-        <span class="sub">2026年11月30日(月)開催</span>
-    </div>
+<!-- ヘッダー -->
+<header>
+    <span>狭山市ゴルフ協会</span>
+</header>
+
+<!-- ナビ -->
+<div class="nav-tabs">
+    <a href="/sayamashi-golf-kyokai/">ホーム</a>
+    <a href="/sayamashi-golf-kyokai/events-home/index.html">大会案内</a>
+    <a href="/sayamashi-golf-kyokai/list/yakuin-meibo/index.html">役員名簿</a>
+    <a href="/sayamashi-golf-kyokai/list/toiawase/index.html">問合せ</a>
+</div>
+
+<!-- タイトル -->
+<div class="page-title">
+    <h1>第93回 狭山市ゴルフ大会</h1>
+    <p>2027年3月10日(水)開催</p>
 </div>
 
 <!-- 開催概要 -->
 <section>
     <h2><i class="fa-solid fa-calendar icon"></i>開催概要</h2>
 
-    <p><i class="fa-regular fa-clock icon"></i>開催日：2027年03月10日(水)</p>
+    <p><i class="fa-regular fa-clock icon"></i>開催日：2027年3月10日(水)</p>
     <p><i class="fa-solid fa-location-dot icon"></i>場所：武蔵カントリークラブ笹井コース</p>
     <p><i class="fa-solid fa-user-group icon"></i>定員：140名</p>
-    <p><i class="fa-solid fa-yen-sign icon"></i>参加費：2000円、抽選会にて申し込み時にお支払いください。</p>
-    <p>※別途、当日プレー費がかかります。</p>
-    <p>※非協会員の方は、年間の初回参加時に年会費1,000円を頂戴しております。</p>
+    <p><i class="fa-solid fa-yen-sign icon"></i>参加費：2000円（抽選会時支払い）</p>
+    <p>※別途プレー費がかかります。</p>
+    <p>※非協会員の方は初回参加時に年会費1,000円が必要です。</p>
 
     <div class="map-container">
         <iframe src="https://www.google.com/maps?q=武蔵カントリークラブ笹井コース&output=embed"></iframe>
@@ -224,8 +265,8 @@ h2{
 <section>
     <h2><i class="fa-solid fa-circle-info icon"></i>問合せ先</h2>
 
-    <p><i class="fa-solid fa-phone icon"></i>電話番号：00-0000-0000</p>
-    <p><i class="fa-solid fa-envelope icon"></i>メール：example@example.com</p>
+    <p><i class="fa-solid fa-phone icon"></i>00-0000-0000</p>
+    <p><i class="fa-solid fa-envelope icon"></i>example@example.com</p>
 </section>
 
 </body>
