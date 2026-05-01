@@ -1,10 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>狭山市ゴルフ協会</title>
+<title>狭山市民ゴルフ大会 2027年03月10日(水)開催</title>
 
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -15,185 +17,151 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f5f7f5;
+    font-family: Arial, sans-serif;
     color:#333;
-    line-height:1.6;
+    background:#ffffff;
+    line-height:1.7;
 }
 
 /* ======================
-   ヘッダー
+   HERO
 ====================== */
-header{
+.hero{
     position:relative;
-    width:100%;
-    min-height:320px;
-    background:url("header.jpg") center 35% / cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    text-align:center;
-    font-size:4rem;
-    font-weight:bold;
+    height:40vh;
+    min-height:380px;
     overflow:hidden;
+
+    /* header.jpg を背景表示 */
+    background-image:url("header.jpg");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
 }
 
-header::before{
+/* オーバーレイ */
+.hero::after{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,0.58);
+    z-index:1;
 }
 
-header span{
-    position:relative;
+/* タイトル */
+.hero-title{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
     z-index:2;
-    text-shadow:0 4px 12px rgba(0,0,0,0.9);
-}
-
-/* ======================
-   ナビタブ
-====================== */
-.nav-tabs{
-    display:flex;
-    justify-content:center;
-    background:#ffffff;
-    border-bottom:2px solid #c8e6c9;
-}
-
-.nav-tabs a{
-    flex:1;
+    color:#fff;
     text-align:center;
-    padding:28px 5px;
-    text-decoration:none;
-    color:#2e7d32;
+    width:90%;
     font-weight:bold;
-    font-size:1.2rem;
-    border-right:1px solid #e0e0e0;
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.9),
+        0 4px 12px rgba(0,0,0,0.8);
 }
 
-.nav-tabs a:last-child{
-    border-right:none;
+.hero-title .main{
+    display:block;
+    font-size:3rem;
+    margin-bottom:12px;
 }
 
-.nav-tabs a:hover{
-    background:#e8f5e9;
+.hero-title .sub{
+    display:block;
+    font-size:2rem;
+    white-space:nowrap; /* 改行防止 */
 }
 
 /* ======================
-   コメント欄
+   共通
 ====================== */
-.intro-box{
-    background:#ffffff;
-    border:2px solid #c8e6c9;
-    border-radius:10px;
-    padding:22px;
-    margin-bottom:25px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
 }
 
-.intro-title{
-    font-size:1.2rem;
-    font-weight:bold;
-    color:#2e7d32;
-    margin-bottom:10px;
-}
-
-.intro-box p{
-    margin-bottom:8px;
-}
-
-.intro-footer{
-    margin-top:8px;
-    font-weight:bold;
-    color:#2e7d32;
-}
-
-/* ======================
-   メイン
-====================== */
-main{
-    max-width:900px;
-    margin:40px auto;
-    padding:0 20px;
-}
-
-.main-title{
-    font-size:1.8rem;
-    font-weight:bold;
-    color:#2e7d32;
+h2{
+    font-size:1.7rem;
+    border-bottom:2px solid #ccc;
+    padding-bottom:10px;
     margin-bottom:20px;
+}
+
+p{
+    margin-bottom:12px;
+}
+
+.icon{
+    color:#2e7d32;
+    margin-right:8px;
+    width:22px;
+}
+
+/* ======================
+   ボタン
+====================== */
+.button{
+    display:block;
+    width:100%;
+    max-width:320px;
+    padding:13px;
+    margin-top:15px;
+    background:#0066cc;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
     text-align:center;
 }
 
+.button:hover{
+    background:#004999;
+}
+
 /* ======================
-   スクロール欄
+   マップ
 ====================== */
-.scroll-box{
-    background:#ffffff;
-    border:2px solid #c8e6c9;
-    border-radius:10px;
-    padding:15px;
-    height:360px;
-    overflow-y:auto;
-    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+.map-container{
+    width:50%;
+    margin-top:15px;
 }
 
-.event-card{
-    background:#f9fff9;
-    border:1px solid #d9eadb;
-    border-left:6px solid #2e7d32;
-    border-radius:8px;
-    padding:16px;
-    margin-bottom:15px;
-}
-
-.event-date{
-    font-size:1.1rem;
-    font-weight:bold;
-    color:#1b5e20;
-    margin-bottom:8px;
-}
-
-.event-text{
-    font-size:0.96rem;
-    color:#444;
-    margin-bottom:4px;
-}
-
-.detail-link{
-    color:#0066cc;
-    text-decoration:underline;
-    font-weight:bold;
-}
-
-.detail-link:hover{
-    color:#004999;
+.map-container iframe{
+    width:100%;
+    height:300px;
+    border:0;
 }
 
 /* ======================
-   スマホ対応
+   スマホ
 ====================== */
 @media (max-width:768px){
 
-header{
-    min-height:200px;
-    font-size:2rem;
+.hero{
+    height:38vh;
+    min-height:260px;
 }
 
-.nav-tabs a{
-    padding:16px 3px;
-    font-size:0.9rem;
+.hero-title .main{
+    font-size:1.6rem;
+    margin-bottom:8px;
 }
 
-main{
-    margin:25px auto;
-    padding:0 14px;
+.hero-title .sub{
+    font-size:1.15rem;
+    white-space:nowrap; /* スマホでも改行防止 */
 }
 
-.scroll-box{
-    height:320px;
+.map-container{
+    width:100%;
+}
+
+h2{
+    font-size:1.35rem;
 }
 
 }
@@ -202,71 +170,63 @@ main{
 
 <body>
 
-<!-- ヘッダー -->
-<header>
-    <span>狭山市ゴルフ協会</span>
-</header>
-
-<!-- ナビ -->
-<div class="nav-tabs">
-    <a href="/sayamashi-golf-kyokai/">ホーム</a>
-    <a href="#">大会案内</a>
-    <a href="/sayamashi-golf-kyokai/list/yakuin-meibo/index.html">役員名簿</a>
-    <a href="/sayamashi-golf-kyokai/list/toiawase/index.html">問合せ</a>
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-title">
+        <span class="main">狭山市民ゴルフ大会</span>
+        <span class="sub">2026年11月30日(月)開催</span>
+    </div>
 </div>
 
-<main>
+<!-- 開催概要 -->
+<section>
+    <h2><i class="fa-solid fa-calendar icon"></i>開催概要</h2>
 
-<div class="intro-box">
-    <div class="intro-title">狭山市のゴルフ愛好者の皆様へ</div>
-    <p>親睦と技術向上を目的とした「狭山市ゴルフ大会」のご案内です。</p>
-    <p>狭山市に在住の方、狭山市に勤務の方であればどなたでも参加可能です。</p>
-    <p>日頃の練習の成果を発揮しながら、ゴルフを通じた交流をお楽しみください。</p>
-    <div class="intro-footer">皆様のご参加を心よりお待ちしております。</div>
-</div>
+    <p><i class="fa-regular fa-clock icon"></i>開催日：2027年03月10日(水)</p>
+    <p><i class="fa-solid fa-location-dot icon"></i>場所：武蔵カントリークラブ笹井コース</p>
+    <p><i class="fa-solid fa-user-group icon"></i>定員：140名</p>
+    <p><i class="fa-solid fa-yen-sign icon"></i>参加費：2000円、抽選会にて申し込み時にお支払いください。</p>
+    <p>※別途、当日プレー費がかかります。</p>
+    <p>※非協会員の方は、年間の初回参加時に年会費1,000円を頂戴しております。</p>
 
-<div class="main-title">
-    狭山市ゴルフ大会のご案内
-</div>
-
-<div class="scroll-box">
-
-    <div class="event-card">
-        <div class="event-date">
-            <i class="fa-solid fa-calendar-days"></i> 第91回狭山市ゴルフ大会
-        </div>
-        <div class="event-text">
-            <a href="/sayamashi-golf-kyokai/events-home/events/2026.09.28/index.html" class="detail-link">詳細はこちら</a>
-        </div>
-        <div class="event-text">開催場所：狭山ゴルフ・クラブ</div>
-        <div class="event-text">開催予定日：2026年9月28日(月)</div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=武蔵カントリークラブ笹井コース&output=embed"></iframe>
     </div>
 
-        <div class="event-card">
-        <div class="event-date">
-            <i class="fa-solid fa-calendar-days"></i> 第92回狭山市ゴルフ大会
-        </div>
-        <div class="event-text">
-            <a href="/sayamashi-golf-kyokai/events-home/events/2026.11.30/index.html" class="detail-link">詳細はこちら</a>
-        </div>
-        <div class="event-text">開催場所：日高カントリークラブ</div>
-        <div class="event-text">開催予定日：2026年11月30日(月)</div>
+    <a href="https://www.google.com/maps/search/?api=1&query=武蔵カントリークラブ笹井コース"
+       target="_blank"
+       class="button">
+       Googleマップで開く
+    </a>
+</section>
+
+<!-- 申し込み方法 -->
+<section>
+    <h2><i class="fa-solid fa-clipboard-list icon"></i>申し込み方法</h2>
+
+    <p>抽選会での参加申し込みをもって正式申込となります。</p>
+
+    <p><i class="fa-regular fa-clock icon"></i>抽選日時：調整中</p>
+    <p><i class="fa-solid fa-location-dot icon"></i>抽選会開催場所：調整中</p>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=狭山市役所&output=embed"></iframe>
     </div>
 
-        <div class="event-card">
-        <div class="event-date">
-            <i class="fa-solid fa-calendar-days"></i> 第93回狭山市ゴルフ大会
-        </div>
-        <div class="event-text">
-            <a href="/sayamashi-golf-kyokai/events-home/events/2027.03.10/index.html" class="detail-link">詳細はこちら</a>
-        </div>
-        <div class="event-text">開催場所：武蔵カントリークラブ笹井コース</div>
-        <div class="event-text">開催予定日：2027年3月10日(水)</div>
-    </div>
-    
-</div>
+    <a href="https://www.google.com/maps/search/?api=1&query=狭山市役所"
+       target="_blank"
+       class="button">
+       Googleマップで開く
+    </a>
+</section>
 
-</main>
+<!-- 問合せ -->
+<section>
+    <h2><i class="fa-solid fa-circle-info icon"></i>問合せ先</h2>
+
+    <p><i class="fa-solid fa-phone icon"></i>電話番号：00-0000-0000</p>
+    <p><i class="fa-solid fa-envelope icon"></i>メール：example@example.com</p>
+</section>
 
 </body>
 </html>
