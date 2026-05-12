@@ -21,21 +21,21 @@ body{
 }
 
 /* ======================
-   ヘッダー
+   ヘッダー（改善版）
 ====================== */
 header{
     position:relative;
+    width:100%;
     min-height:320px;
     background:url("header.jpg") center 35% / cover no-repeat;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     color:#fff;
+    text-align:center;
     font-size:4rem;
     font-weight:bold;
-    text-align:center;
+    overflow:hidden;
 }
 
 header::before{
@@ -43,12 +43,27 @@ header::before{
     position:absolute;
     inset:0;
     background:rgba(0,0,0,0.45);
+    z-index:1;
 }
 
 header span{
     position:relative;
     z-index:2;
-    text-shadow:0 4px 12px rgba(0,0,0,0.9);
+    text-shadow:
+        0 4px 12px rgba(0,0,0,0.9);
+}
+
+/* ======================
+   スマホ対応
+====================== */
+@media (max-width:768px){
+
+header{
+    min-height:200px;
+    font-size:2rem;
+    background-position:center center;
+}
+
 }
 
 /* ======================
